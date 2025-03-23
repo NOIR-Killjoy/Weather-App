@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Weather App Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for the Weather App, built using **React.js** and **Material-UI (MUI)**. It provides a modern UI with real-time weather data, AQI, and local news updates.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Dynamic UI** – Clean and modern design built with **Material-UI (MUI)**.
+- **Weather Data Display** – Shows:
+  - Temperature
+  - Air Quality Index (AQI)
+  - Humidity levels
+  - Probability of rain (next 3 hours)
+  - Sunset time
+  - 3-day forecast
+- **Graphical Representation** – Uses **Recharts** for:
+  - Hourly precipitation chart
+  - Wind data visualization
+- **Side News Applet** – Displays local news updates.
+- **Theming** – Background changes dynamically based on weather conditions and time.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React.js**
+- **Material-UI (MUI)** (for UI components)
+- **Recharts** (for graphs and visualizations)
+- **Axios** (for fetching data from the backend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation and Setup
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have the following installed:
+- **Node.js** (LTS version recommended)
+- **npm** or **yarn**
 
-### `npm run build`
+### Steps to Set Up the Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/your-repo/weather-app-frontend.git
+   cd weather-app-frontend
+Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    npm install
+Set up environment variables:
+Create a .env file in the project root and configure the backend API URL:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    REACT_APP_BACKEND_URL=http://localhost:5000
+Start the frontend:
+    
+    npm start
+The app will be available at http://localhost:3000.
 
-### `npm run eject`
+API Communication
+The frontend fetches data from the backend using the following endpoints:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Feature	    Endpoint	Method
+Weather	    /weather	GET
+Local News	/news	    GET
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deployment
+To deploy the frontend, consider using Vercel or Netlify:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Example Deployment with Netlify:
+Install Netlify CLI (optional):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    npm install -g netlify-cli
+Build the project:
 
-## Learn More
+    npm run build
+Deploy using Netlify CLI:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    netlify deploy --prod
+Contribution
+Contributions are welcome! If you'd like to improve the frontend:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Fork the repository.
 
-### Code Splitting
+Create a new branch.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Make your changes and submit a pull request.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License.
