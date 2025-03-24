@@ -9,7 +9,7 @@ import Header from "../components/Header";
 import ThreeDayForecast from "../components/ThreeDayForecast";
 
 const Home = () => {
-    const [city, setCity] = useState("Sehore,India");
+    const [city, setCity] = useState();
     const [weather, setWeather] = useState(null);
     const [news, setNews] = useState([]);
     const [loading, setLoading] = useState(true);
