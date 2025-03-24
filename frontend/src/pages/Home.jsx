@@ -27,14 +27,13 @@ const Home = () => {
     
         // Define background styles in a single return statement
         return {
-            background: condition.includes("rain")
-                ? (isDay ? "linear-gradient(to bottom, #a1c4fd, #c2e9fb)" : "linear-gradient(to bottom, #3a3d40, #181719)")
+            background: 
+                condition.includes("rain")  ? (isDay ? "linear-gradient(to bottom, #a1c4fd, #c2e9fb)" : "linear-gradient(to bottom, #3a3d40, #181719)")
                 : condition.includes("clear") || condition.includes("sunny")
                 ? (isDay ? "linear-gradient(to bottom, #ffdf86, #ff9a44)" : "linear-gradient(to bottom, #1e3c72, #2a5298)")
                 : condition.includes("mist") || condition.includes("fog")
                 ? "linear-gradient(to bottom, #b2beb5, #868f96)"
-                : condition.includes("cloud")
-                ? (isDay ? "linear-gradient(to bottom, #dfe9f3, #a6c0fe)" : "linear-gradient(to bottom, #485563, #29323c)")
+                : condition.includes("cloud")   ? (isDay ? "linear-gradient(to bottom, #dfe9f3, #a6c0fe)" : "linear-gradient(to bottom, #485563, #29323c)")
                 : { backgroundColor: "#2b2b2b" } // Default fallback
         };
     };

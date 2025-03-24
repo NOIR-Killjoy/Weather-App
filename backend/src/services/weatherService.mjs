@@ -47,17 +47,3 @@ function processWeatherData(data) {
 }
 
 export { getWeatherData };
-
-console.log(getWeatherData('Delhi,india'))
-
-async function test() {
-    const data = await getWeatherData("Delhi,India");  // Wait for the API response
-    if (data) {
-        const processedData = processWeatherData(data); // Now process the actual data
-        console.log("Processed Weather Data:", processedData);
-    } else {
-        console.error("Failed to fetch weather data.");
-    }
-}
-
-test();
