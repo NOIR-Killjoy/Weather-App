@@ -1,20 +1,3 @@
-// import { Card, CardContent, Typography } from "@mui/material";
-
-// const WeatherCard = ({ weather }) => {
-//     if (!weather) return null;
-//     return (
-//         <Card sx={{ maxWidth: 400, mx: "auto", mt: 2, p: 2 }}>
-//             <CardContent>
-//                 <Typography variant="h5">{`${weather.location}, ${weather.country}`}</Typography>
-//                 <Typography variant="h6">{weather?.temperature}°C</Typography>
-//                 <Typography>{weather?.condition.text}</Typography>
-//             </CardContent>
-//         </Card>
-//     );
-// };
-
-// export default WeatherCard;
-
 
 import { Card, CardContent, Typography, Box } from "@mui/material";
 
